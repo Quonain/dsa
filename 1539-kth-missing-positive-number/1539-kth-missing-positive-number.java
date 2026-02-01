@@ -4,7 +4,8 @@ class Solution {
         int high=arr.length-1;
         while(low<=high){
             int mid=low+(high-low)/2;
-            if(arr[mid]-mid-1 < k){
+            if(arr[mid]-mid-1 < k// missing no ayega agr k se km toh move right
+            ){
                 low=mid+1;
             }
             else{
