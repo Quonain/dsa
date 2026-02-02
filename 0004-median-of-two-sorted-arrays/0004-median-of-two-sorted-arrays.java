@@ -2,12 +2,12 @@ class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n1=nums1.length;
         int n2=nums2.length;
-        if(n1>n2){
+        if(n1>n2){//chote wale k liye run kro
            return findMedianSortedArrays(nums2,nums1);
         }
         int low=0;
         int high=n1;
-        int left=(n1+n2+1)/2;
+        int left=(n1+n2+1)/2;//left section m kitne rkhoge
         int n=n1+n2;
 
         while(low<=high){
@@ -38,10 +38,10 @@ class Solution {
             }
         
             }
-            if(l1>r2){
+            if(l1>r2){//l1 bda h usko chota kro
                 high=mid1-1;
             }
-            else{
+            else{// yeh except l1>r2 sbke liye run hoga l2>r1 l2 chota h usko bda kro
                 low=mid1+1;
             }
         }
